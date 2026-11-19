@@ -3,8 +3,10 @@ Repository containing the source code and dataset used to generate the YOLOv12 a
 To reproduce the experiment, you must download the images and labels from train and val, the images and labels must have matching names example: 01.png must have a 01.txt.
 As Colab uses your google drive you must give the used path in the config.yaml file, both the validation and train folders in images folder must have a matching validation and train folders in a labels folder, which contains the .txt files. 
 The first colab block must be executed to give access to your Google Drive.
-The next five blocks should be executed in sequence.
+The next three blocks should be executed in sequence.
 Note: The fourth block is used to clear old models and cache; if no models exist, simply comment out the fourth line.
-The seventh block is used to generate augmentations.
-The final three blocks are used to test the model generated in the fifth block.
+Blocks five to eight should better not be executed in sequence, execute only one of them for different freeze and box parameters.
+The ninth block saves the model generated in one of the previous blocks.
+The tenth block is used to generate augmentations.
+The final three blocks are used to test the model generated in the blocks five,six,seven or eight.
 Code instructions are valid for both YOLOv12 and RT-DETR codes.
